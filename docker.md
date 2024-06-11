@@ -51,7 +51,23 @@ rm -rf .git*
         - Os alpine são imagens mais seguros e mais leves.
     
     Criando múltiplos estágios
-        - 
+        - criando arquivo docker compose (docker-compose.yaml)
+        - estrutura basica
+            - Servives:
+            - Networks:
+            - volumes:
+
+### Trabalhando com multiplus containers
+    - docker run -d -p 5432:5432 -e (environment) PSQL_ROOT_PASS=postgres -e PSQL_DATABASE=docker-rocket -e PSQL_USER=postgres --name psql FROM postgres:16.3-alpine3.20
+
+    docker-compose
+        - sudo docker-compose up 
+        - sudo docker-compose up -d
+        - sudo docker-compose build
+        - sudo docker-compose up --build -d
+        - sudo docker-compose down
+
+    wait-for-it
 
 ### Roadmap de configuração dockerfile para um projeto nestjs
     1. node instalado
